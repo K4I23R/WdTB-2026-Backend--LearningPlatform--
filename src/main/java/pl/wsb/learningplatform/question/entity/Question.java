@@ -1,5 +1,6 @@
 package pl.wsb.learningplatform.question.entity;
 import jakarta.persistence.*;
+import pl.wsb.learningplatform.lesson.entity.Lesson;
 
 @Entity
 @Table(name = "questions")
@@ -29,6 +30,10 @@ public class Question {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 1)
     private CorrectAnswer correctAnswer;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "lesson_id", nullable = false)
+    private Lesson lesson;
 
     protected Question() {}
 
@@ -68,6 +73,10 @@ public class Question {
 
     public String getAnswerD() {
         return answerD;
+    }
+
+    public Lesson getLesson() {
+        return lesson;
     }
 
     public CorrectAnswer getCorrectAnswer() {
