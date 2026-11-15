@@ -1,6 +1,7 @@
 package pl.wsb.learningplatform.lesson.entity;
 
 import jakarta.persistence.*;
+import pl.wsb.learningplatform.module.entity.Module;
 
 @Entity
 @Table(name = "lessons")
@@ -20,6 +21,10 @@ public class Lesson {
 
     @Column(nullable = true, length = 100)
     private String additionalResources;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "module_id")
+    private Module module;
 
     protected Lesson() {}
 
