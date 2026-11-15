@@ -28,15 +28,35 @@ insert into courses (title, description, price, currency, practical, level) valu
     ('Technika prowadzenia łodzi motorowej', 'Zasady bezpiecznego manewrowania łodzią motorową w porcie i na otwartej wodzie.', 179.00, 'PLN', true, 'INTERMEDIATE'),
     ('Zaawansowane manewry motorowodne', 'Doskonalenie manewrowania, podejść do kei i reagowania w sytuacjach awaryjnych.', 249.90, 'PLN', true, 'ADVANCED');
 
-insert into lessons (title, content, duration, additional_resources) values
-    ('Budowa jachtu żaglowego', 'Poznaj najważniejsze elementy jachtu, olinowanie oraz przeznaczenie podstawowych żagli.', 45.0, 'https://www.sailing.org/'),
-    ('Zwroty przez sztag i rufę', 'Naucz się prawidłowo wykonywać podstawowe zwroty oraz koordynować pracę załogi.', 60.0, 'https://www.rya.org.uk/'),
-    ('Podstawy nawigacji', 'Poznaj oznakowanie szlaków wodnych, kierunki świata i zasady wyznaczania kursu.', 50.0, 'https://www.iala-aism.org/'),
-    ('Manewrowanie łodzią motorową', 'Ćwicz ruszanie, zatrzymywanie, skręcanie i podejście do kei przy różnych warunkach.', 40.0, 'https://www.gov.pl/web/infrastruktura/bezpieczenstwo-na-wodach'),
-    ('Bezpieczeństwo na wodzie', 'Poznaj wyposażenie ratunkowe, zasady wzywania pomocy i postępowanie w sytuacjach awaryjnych.', 55.0, 'https://www.gov.pl/web/mswia/bezpieczny-wypoczynek-nad-woda');
+insert into modules (title, description, is_active) values
+    ('Wprowadzenie do żeglarstwa', 'Podstawowe informacje o jachtach, bezpieczeństwie i terminologii.', 1),
+    ('Manewry żaglowe', 'Nauka podstawowych manewrów pod żaglami i pracy załogi.', 1),
+    ('Nawigacja i planowanie trasy', 'Podstawy nawigacji morskiej i śródlądowej.', 1),
+    ('Technika prowadzenia łodzi motorowej', 'Zasady bezpiecznego manewrowania łodzią motorową.', 1),
+    ('Zaawansowane manewry motorowodne', 'Doskonalenie manewrowania i reagowania w sytuacjach awaryjnych.', 1);
+
+
+insert into lessons (title, content, duration, additional_resources, module_id) values
+    ('Budowa jachtu żaglowego', 'Poznaj najważniejsze elementy jachtu, olinowanie oraz przeznaczenie podstawowych żagli.', 45.0, 'https://www.sailing.org/', 1),
+    ('Bezpieczeństwo na jachcie', 'Dowiedz się, jak prawidłowo korzystać z kamizelek ratunkowych, sygnałów alarmowych i procedur awaryjnych.', 30.0, 'https://www.gov.pl/web/mswia/bezpieczny-wypoczynek-nad-woda', 1),
+    ('Podstawowe manewry żaglowe', 'Naucz się wykonywać zwroty przez sztag i rufę oraz koordynować pracę załogi podczas manewrów.', 60.0, 'https://www.rya.org.uk/', 2),
+    ('Nawigacja podstawowa', 'Poznaj oznakowanie szlaków wodnych, kierunki świata i zasady wyznaczania kursu.', 50.0, 'https://www.iala-aism.org/', 3),
+    ('Manewrowanie łodzią motorową', 'Ćwicz ruszanie, zatrzymywanie, skręcanie i podejście do kei przy różnych warunkach.', 40.0, 'https://www.gov.pl/web/infrastruktura/bezpieczenstwo-na-wodach', 4),
+    ('Zaawansowane manewry motorowodne', 'Doskonalenie manewrowania, podejść do kei i reagowania w sytuacjach awaryjnych.', 70.0, 'https://www.boat-ed.com/', 5),
+    ('Zwroty przez sztag i rufę', 'Naucz się prawidłowo wykonywać podstawowe zwroty oraz koordynować pracę załogi.', 60.0, 'https://www.rya.org.uk/', 5),
+    ('Podstawy nawigacji', 'Poznaj oznakowanie szlaków wodnych, kierunki świata i zasady wyznaczania kursu.', 50.0, 'https://www.iala-aism.org/', 5);
+
 
 insert into questions (title, content, answerA, answerB, answerC, answerD, correct_answer) values
     ('Znak kardynalny', 'Co oznacza pojedynczy czerwony znak kardynalny w kształcie walca?', 'Bezpieczna woda', 'Lewą stronę szlaku', 'Prawą stronę szlaku', 'Miejsce kotwiczenia', 'A'),
+    ('Zwrot przez sztag', 'Co należy zrobić przed rozpoczęciem zwrotu przez sztag?', 'Zwiększyć prędkość silnika', 'Sprawdzić otoczenie i uprzedzić załogę', 'Opuścić kotwicę', 'Zgasić wszystkie światła', 'B'),
+    ('Kamizelka ratunkowa', 'Kiedy należy założyć kamizelkę ratunkową?', 'Tylko podczas postoju', 'W razie potrzeby, zgodnie z zasadami bezpieczeństwa', 'Tylko po zmroku', 'Nigdy na spokojnej wodzie', 'B'),
+    ('Manewr łodzią motorową', 'Jak najbezpieczniej ograniczyć prędkość łodzi motorowej przed podejściem do kei?', 'Zwolnić odpowiednio wcześnie', 'Wyłączyć sterowanie', 'Przyspieszyć', 'Wykonać ostry skręt przy kei', 'A'),
+    ('Pierwszeństwo na wodzie', 'Co powinien zrobić sternik, gdy nie ma pewności co do zamiarów innej jednostki?', 'Zmniejszyć prędkość i zachować bezpieczny odstęp', 'Przyspieszyć', 'Wykonać przypadkowy zwrot', 'Opuścić załogę do wody', 'A');
+
+
+insert into questions (title, content, answerA, answerB, answerC, answerD, correct_answer)
+values ('Znak kardynalny', 'Co oznacza pojedynczy czerwony znak kardynalny w kształcie walca?', 'Bezpieczna woda', 'Lewą stronę szlaku', 'Prawą stronę szlaku', 'Miejsce kotwiczenia', 'A'),
     ('Zwrot przez sztag', 'Co należy zrobić przed rozpoczęciem zwrotu przez sztag?', 'Zwiększyć prędkość silnika', 'Sprawdzić otoczenie i uprzedzić załogę', 'Opuścić kotwicę', 'Zgasić wszystkie światła', 'B'),
     ('Kamizelka ratunkowa', 'Kiedy należy założyć kamizelkę ratunkową?', 'Tylko podczas postoju', 'W razie potrzeby, zgodnie z zasadami bezpieczeństwa', 'Tylko po zmroku', 'Nigdy na spokojnej wodzie', 'B'),
     ('Manewr łodzią motorową', 'Jak najbezpieczniej ograniczyć prędkość łodzi motorowej przed podejściem do kei?', 'Zwolnić odpowiednio wcześnie', 'Wyłączyć sterowanie', 'Przyspieszyć', 'Wykonać ostry skręt przy kei', 'A'),
