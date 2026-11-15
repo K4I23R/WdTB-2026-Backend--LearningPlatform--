@@ -2,6 +2,9 @@ package pl.wsb.learningplatform.lesson.entity;
 
 import jakarta.persistence.*;
 import pl.wsb.learningplatform.module.entity.Module;
+import pl.wsb.learningplatform.question.entity.Question;
+
+import java.util.List;
 
 @Entity
 @Table(name = "lessons")
@@ -25,6 +28,9 @@ public class Lesson {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "module_id")
     private Module module;
+
+    @OneToMany(mappedBy = "lesson")
+    private List<Question> questions;
 
     protected Lesson() {}
 
@@ -51,5 +57,13 @@ public class Lesson {
 
     public void setContent(String content) {
         Content = content;
+    }
+
+    public Float getDuration() {
+        return duration;
+    }
+
+    public List<Question> getQuestions() {
+        return questions;
     }
 }

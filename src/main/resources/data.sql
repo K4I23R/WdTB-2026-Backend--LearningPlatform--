@@ -47,20 +47,12 @@ insert into lessons (title, content, duration, additional_resources, module_id) 
     ('Podstawy nawigacji', 'Poznaj oznakowanie szlaków wodnych, kierunki świata i zasady wyznaczania kursu.', 50.0, 'https://www.iala-aism.org/', 5);
 
 
-insert into questions (title, content, answerA, answerB, answerC, answerD, correct_answer) values
-    ('Znak kardynalny', 'Co oznacza pojedynczy czerwony znak kardynalny w kształcie walca?', 'Bezpieczna woda', 'Lewą stronę szlaku', 'Prawą stronę szlaku', 'Miejsce kotwiczenia', 'A'),
-    ('Zwrot przez sztag', 'Co należy zrobić przed rozpoczęciem zwrotu przez sztag?', 'Zwiększyć prędkość silnika', 'Sprawdzić otoczenie i uprzedzić załogę', 'Opuścić kotwicę', 'Zgasić wszystkie światła', 'B'),
-    ('Kamizelka ratunkowa', 'Kiedy należy założyć kamizelkę ratunkową?', 'Tylko podczas postoju', 'W razie potrzeby, zgodnie z zasadami bezpieczeństwa', 'Tylko po zmroku', 'Nigdy na spokojnej wodzie', 'B'),
-    ('Manewr łodzią motorową', 'Jak najbezpieczniej ograniczyć prędkość łodzi motorowej przed podejściem do kei?', 'Zwolnić odpowiednio wcześnie', 'Wyłączyć sterowanie', 'Przyspieszyć', 'Wykonać ostry skręt przy kei', 'A'),
-    ('Pierwszeństwo na wodzie', 'Co powinien zrobić sternik, gdy nie ma pewności co do zamiarów innej jednostki?', 'Zmniejszyć prędkość i zachować bezpieczny odstęp', 'Przyspieszyć', 'Wykonać przypadkowy zwrot', 'Opuścić załogę do wody', 'A');
-
-
-insert into questions (title, content, answerA, answerB, answerC, answerD, correct_answer)
-values ('Znak kardynalny', 'Co oznacza pojedynczy czerwony znak kardynalny w kształcie walca?', 'Bezpieczna woda', 'Lewą stronę szlaku', 'Prawą stronę szlaku', 'Miejsce kotwiczenia', 'A'),
-    ('Zwrot przez sztag', 'Co należy zrobić przed rozpoczęciem zwrotu przez sztag?', 'Zwiększyć prędkość silnika', 'Sprawdzić otoczenie i uprzedzić załogę', 'Opuścić kotwicę', 'Zgasić wszystkie światła', 'B'),
-    ('Kamizelka ratunkowa', 'Kiedy należy założyć kamizelkę ratunkową?', 'Tylko podczas postoju', 'W razie potrzeby, zgodnie z zasadami bezpieczeństwa', 'Tylko po zmroku', 'Nigdy na spokojnej wodzie', 'B'),
-    ('Manewr łodzią motorową', 'Jak najbezpieczniej ograniczyć prędkość łodzi motorowej przed podejściem do kei?', 'Zwolnić odpowiednio wcześnie', 'Wyłączyć sterowanie', 'Przyspieszyć', 'Wykonać ostry skręt przy kei', 'A'),
-    ('Pierwszeństwo na wodzie', 'Co powinien zrobić sternik, gdy nie ma pewności co do zamiarów innej jednostki?', 'Zmniejszyć prędkość i zachować bezpieczny odstęp', 'Przyspieszyć', 'Wykonać przypadkowy zwrot', 'Opuścić załogę do wody', 'A');
+insert into questions (title, content, answerA, answerB, answerC, answerD, correct_answer, lesson_id) values
+    ('Znak kardynalny', 'Co oznacza pojedynczy czerwony znak kardynalny w kształcie walca?', 'Bezpieczna woda', 'Lewą stronę szlaku', 'Prawą stronę szlaku', 'Miejsce kotwiczenia', 'A', 4),
+    ('Zwrot przez sztag', 'Co należy zrobić przed rozpoczęciem zwrotu przez sztag?', 'Zwiększyć prędkość silnika', 'Sprawdzić otoczenie i uprzedzić załogę', 'Opuścić kotwicę', 'Zgasić wszystkie światła', 'B', 5),
+    ('Kamizelka ratunkowa', 'Kiedy należy założyć kamizelkę ratunkową?', 'Tylko podczas postoju', 'W razie potrzeby, zgodnie z zasadami bezpieczeństwa', 'Tylko po zmroku', 'Nigdy na spokojnej wodzie', 'B', 4),
+    ('Manewr łodzią motorową', 'Jak najbezpieczniej ograniczyć prędkość łodzi motorowej przed podejściem do kei?', 'Zwolnić odpowiednio wcześnie', 'Wyłączyć sterowanie', 'Przyspieszyć', 'Wykonać ostry skręt przy kei', 'A', 5),
+    ('Pierwszeństwo na wodzie', 'Co powinien zrobić sternik, gdy nie ma pewności co do zamiarów innej jednostki?', 'Zmniejszyć prędkość i zachować bezpieczny odstęp', 'Przyspieszyć', 'Wykonać przypadkowy zwrot', 'Opuścić załogę do wody', 'A', 4);
 
 
 
