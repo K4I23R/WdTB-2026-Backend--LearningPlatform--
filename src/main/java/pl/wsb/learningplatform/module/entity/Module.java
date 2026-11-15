@@ -20,15 +20,19 @@ public class Module {
     @Column(nullable = true)
     private Float duration;
 
+    @Column(nullable = false)
+    private boolean isActive = true;
+
     @OneToMany(mappedBy = "module")
     private List<Lesson> lessons = new java.util.ArrayList<>();
 
     protected Module() {}
 
-    public Module(String title, String description, Float duration) {
+    public Module(String title, String description, Float duration, boolean isActive) {
         this.title = title;
         this.description = description;
         this.duration = duration;
+        this.isActive = isActive;
     }
 
     public Long getId() {
@@ -45,5 +49,9 @@ public class Module {
 
     public Float getDuration() {
         return duration;
+    }
+
+    public boolean isActive() {
+        return isActive;
     }
 }
