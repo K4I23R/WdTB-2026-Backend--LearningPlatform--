@@ -8,18 +8,23 @@ insert into user_account (email, display_name, role, created_at) values
     ('admin@example.com',       'Admin', 'ADMIN',   current_timestamp),
     ('maksymilian.pakos@student.merito.pl', 'Pakos', 'ADMIN', current_timestamp),
     ('patryk.paryska@student.merito.pl', 'Patryk', 'ADMIN', current_timestamp),
-    ('michał.snella@student.merito.pl', 'Michał', 'ADMIN', current_timestamp);
+    ('michał.snella@student.merito.pl', 'Michał', 'ADMIN', current_timestamp),
+    ('anna.kowalska@student.merito.pl', 'Anna', 'USER', current_timestamp),
+    ('piotr.nowak@student.merito.pl', 'Piotr', 'USER', current_timestamp),
+    ('maria.wisniewska@student.merito.pl', 'Maria', 'USER', current_timestamp),
+    ('tomasz.wojcik@student.merito.pl', 'Tomasz', 'USER', current_timestamp),
+    ('julia.kaminska@student.merito.pl', 'Julia', 'USER', current_timestamp);
 
 -- LAB 01: Wasze konta (zmieńcie na swoje dane, rola USER)
 -- insert into user_account (email, display_name, role, created_at) values
 --     ('imie.nazwisko@student.merito.pl', 'Imię', 'USER', current_timestamp);
 
-insert into user_profiles (first_name, last_name, email, street, city, country) values
-    ('Anna', 'Kowalska', 'anna.kowalska@example.com', 'ul. Długa 12', 'Warszawa', 'Polska'),
-    ('Piotr', 'Nowak', 'piotr.nowak@example.com', 'ul. Prosta 8', 'Krakow', 'Polska'),
-    ('Maria', 'Wiśniewska', 'maria.wisniewska@example.com', 'ul. Leśna 4', 'Gdańsk', 'Polska'),
-    ('Tomasz', 'Wójcik', 'tomasz.wojcik@example.com', 'ul. Szkolna 21', 'Wrocław', 'Polska'),
-    ('Julia', 'Kamińska', 'julia.kaminska@example.com', 'ul. Ogrodowa 7', 'Poznań', 'Polska');
+insert into user_profiles (first_name, last_name, email, street, city, country, user_id) values
+    ('Anna', 'Kowalska', 'anna.kowalska@example.com', 'ul. Długa 12', 'Warszawa', 'Polska', 8),
+    ('Piotr', 'Nowak', 'piotr.nowak@example.com', 'ul. Prosta 8', 'Krakow', 'Polska', 9),
+    ('Maria', 'Wiśniewska', 'maria.wisniewska@example.com', 'ul. Leśna 4', 'Gdańsk', 'Polska', 10),
+    ('Tomasz', 'Wójcik', 'tomasz.wojcik@example.com', 'ul. Szkolna 21', 'Wrocław', 'Polska', 11),
+    ('Julia', 'Kamińska', 'julia.kaminska@example.com', 'ul. Ogrodowa 7', 'Poznań', 'Polska', 12);
 
 insert into courses (title, description, price, currency, practical, level) values
     ('Podstawy żeglarstwa', 'Wprowadzenie do budowy jachtu, zasad bezpieczeństwa i podstawowej terminologii żeglarskiej.', 0.00, 'PLN', true, 'BEGINNER'),

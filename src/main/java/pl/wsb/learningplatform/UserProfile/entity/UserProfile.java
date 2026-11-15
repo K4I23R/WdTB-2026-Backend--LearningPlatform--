@@ -1,6 +1,7 @@
 package pl.wsb.learningplatform.UserProfile.entity;
 
 import jakarta.persistence.*;
+import pl.wsb.learningplatform.account.domain.UserAccount;
 
 @Entity
 @Table(name = "user_profiles")
@@ -21,6 +22,10 @@ public class UserProfile {
     @Embedded
     @Column(nullable = false)
     private UserAdress address;
+
+    @OneToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private UserAccount userAccount;
 
     protected UserProfile() {}
 
