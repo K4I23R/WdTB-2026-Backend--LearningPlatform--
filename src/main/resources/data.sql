@@ -67,3 +67,20 @@ insert into modules (title, description, is_active) values
     ('Nawigacja i planowanie trasy', 'Podstawy nawigacji morskiej i śródlądowej.', 1),
     ('Technika prowadzenia łodzi motorowej', 'Zasady bezpiecznego manewrowania łodzią motorową.', 1),
     ('Zaawansowane manewry motorowodne', 'Doskonalenie manewrowania i reagowania w sytuacjach awaryjnych.', 1);
+
+
+
+insert into course_modules (course_id, module_id, order_in_course, mandatory) values
+    (1, 1, 1, true),
+    (2, 2, 1, true),
+    (3, 3, 1, true),
+    (4, 4, 1, true),
+    (5, 5, 1, true);
+
+
+insert into user_courses (user_id, course_id, enrollment_date) values
+    (1, 1, current_timestamp),
+    (2, 2, current_timestamp),
+    (3, 3, current_timestamp),
+    (4, 4, current_timestamp),
+    (5, 5, current_timestamp);
