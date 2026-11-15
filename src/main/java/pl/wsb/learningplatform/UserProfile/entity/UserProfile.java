@@ -23,7 +23,7 @@ public class UserProfile {
     @Column(nullable = false)
     private UserAdress address;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "user_id", nullable = false)
     private UserAccount userAccount;
 

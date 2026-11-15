@@ -31,7 +31,7 @@ public class Question {
     @Column(nullable = false, length = 1)
     private CorrectAnswer correctAnswer;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "lesson_id", nullable = false)
     private Lesson lesson;
 
