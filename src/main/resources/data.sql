@@ -43,9 +43,9 @@ insert into questions (title, content, answerA, answerB, answerC, answerD, corre
     ('Pierwszeństwo na wodzie', 'Co powinien zrobić sternik, gdy nie ma pewności co do zamiarów innej jednostki?', 'Zmniejszyć prędkość i zachować bezpieczny odstęp', 'Przyspieszyć', 'Wykonać przypadkowy zwrot', 'Opuścić załogę do wody', 'A');
 
 
-insert into modules (title, description, course_id) values
-    ('Wprowadzenie do żeglarstwa', 'Podstawowe informacje o jachtach, bezpieczeństwie i terminologii.', 1),
-    ('Manewry żaglowe', 'Nauka podstawowych manewrów pod żaglami i pracy załogi.', 2),
-    ('Nawigacja i planowanie trasy', 'Podstawy nawigacji morskiej i śródlądowej.', 3),
-    ('Technika prowadzenia łodzi motorowej', 'Zasady bezpiecznego manewrowania łodzią motorową.', 4),
-    ('Zaawansowane manewry motorowodne', 'Doskonalenie manewrowania i reagowania w sytuacjach awaryjnych.', 5);
+insert into modules (title, description) values
+    ('Wprowadzenie do żeglarstwa', 'Podstawowe informacje o jachtach, bezpieczeństwie i terminologii.'),
+    ('Manewry żaglowe', 'Nauka podstawowych manewrów pod żaglami i pracy załogi.'),
+    ('Nawigacja i planowanie trasy', 'Podstawy nawigacji morskiej i śródlądowej.'),
+    ('Technika prowadzenia łodzi motorowej', 'Zasady bezpiecznego manewrowania łodzią motorową.'),
+    ('Zaawansowane manewry motorowodne', 'Doskonalenie manewrowania i reagowania w sytuacjach awaryjnych.');
