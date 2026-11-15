@@ -41,3 +41,11 @@ insert into questions (title, content, answerA, answerB, answerC, answerD, corre
     ('Kamizelka ratunkowa', 'Kiedy należy założyć kamizelkę ratunkową?', 'Tylko podczas postoju', 'W razie potrzeby, zgodnie z zasadami bezpieczeństwa', 'Tylko po zmroku', 'Nigdy na spokojnej wodzie', 'B'),
     ('Manewr łodzią motorową', 'Jak najbezpieczniej ograniczyć prędkość łodzi motorowej przed podejściem do kei?', 'Zwolnić odpowiednio wcześnie', 'Wyłączyć sterowanie', 'Przyspieszyć', 'Wykonać ostry skręt przy kei', 'A'),
     ('Pierwszeństwo na wodzie', 'Co powinien zrobić sternik, gdy nie ma pewności co do zamiarów innej jednostki?', 'Zmniejszyć prędkość i zachować bezpieczny odstęp', 'Przyspieszyć', 'Wykonać przypadkowy zwrot', 'Opuścić załogę do wody', 'A');
+
+
+insert into modules (title, description, course_id) values
+    ('Wprowadzenie do żeglarstwa', 'Podstawowe informacje o jachtach, bezpieczeństwie i terminologii.', 1),
+    ('Manewry żaglowe', 'Nauka podstawowych manewrów pod żaglami i pracy załogi.', 2),
+    ('Nawigacja i planowanie trasy', 'Podstawy nawigacji morskiej i śródlądowej.', 3),
+    ('Technika prowadzenia łodzi motorowej', 'Zasady bezpiecznego manewrowania łodzią motorową.', 4),
+    ('Zaawansowane manewry motorowodne', 'Doskonalenie manewrowania i reagowania w sytuacjach awaryjnych.', 5);
